@@ -78,7 +78,7 @@ public class DisplayDiaries extends ListActivity
 
         realm.beginTransaction();
 
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 1000; i++)
         {
             realm.copyToRealm(entry);
         }
@@ -87,7 +87,7 @@ public class DisplayDiaries extends ListActivity
 
         this.adapter.setData(realm.where(DiaryEntry.class).findAll());
 
-        CharSequence text = "Added 50 entries";
+        CharSequence text = "Added 1000 entries";
         Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
         toast.show();
 
